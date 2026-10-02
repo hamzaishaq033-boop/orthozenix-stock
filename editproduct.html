@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Edit Product - Orthozenix</title><link rel="stylesheet" href="assets/css/orthozenix.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand"><div class="brand-mark">OZ</div><div><b>ORTHO ZENIX</b><small>Stock Manager</small></div></div>
+<nav><a href="index.html">Dashboard</a><a class="active" href="productlist.html">Products</a><a href="addproduct.html">Add Product</a></nav>
+<div class="sidebar-bottom">Local Storage Mode<br><span>Your data stays in this browser</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><h1>Edit Product</h1><p>Update inventory information</p></div><a class="btn light" href="productlist.html">← Products</a></header>
+<div class="card form-card"><form id="editForm"><div id="editFields" class="form-grid"></div><div class="form-actions"><button class="btn primary">Save Changes</button><a class="btn light" href="productlist.html">Cancel</a></div></form></div>
+</main></div>
+<script src="assets/js/orthozenix.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>OZ.editProduct());</script>
+</body></html>

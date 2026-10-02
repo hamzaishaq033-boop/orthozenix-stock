@@ -1,0 +1,32 @@
+ORTHOZENIX STOCK MANAGER — LOCAL VERSION
+
+Included:
+- Dashboard
+- Add Product
+- Product list/search/filter
+- Catalogue number search
+- Product details
+- Edit/delete
+- Stock + / Stock -
+- Low-stock and out-of-stock status
+- Stock activity history
+- JSON export/import backup
+- Browser localStorage persistence
+
+UPLOAD:
+Replace/add these files in your GitHub main branch:
+index.html
+productlist.html
+addproduct.html
+editproduct.html
+product-details.html
+assets/css/orthozenix.css
+assets/js/orthozenix.js
+
+Then open your Vercel website.
+
+IMPORTANT:
+This version stores data in the browser (localStorage). It is ideal for testing. Data is not shared between different browsers/devices. Use Export Backup before clearing browser data.
+
+NEXT:
+After testing, this can be migrated to Supabase/cloud database for multi-device access and user login.

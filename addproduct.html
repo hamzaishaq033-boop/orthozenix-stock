@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add Product - Orthozenix</title><link rel="stylesheet" href="assets/css/orthozenix.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand"><div class="brand-mark">OZ</div><div><b>ORTHO ZENIX</b><small>Stock Manager</small></div></div>
+<nav><a href="index.html">Dashboard</a><a href="productlist.html">Products</a><a class="active" href="addproduct.html">Add Product</a></nav>
+<div class="sidebar-bottom">Local Storage Mode<br><span>Your data stays in this browser</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><h1>Add Product</h1><p>Create a new inventory item</p></div><a class="btn light" href="productlist.html">← Products</a></header>
+<div class="card form-card">
+<form id="productForm">
+<div class="form-grid">
+<label>Catalogue No. *<input name="catalogue_no" required placeholder="e.g. T81-0101"></label>
+<label>Product Name *<input name="product_name" required placeholder="e.g. DCP Plate"></label>
+<label>Category<select name="category"><option>Plate</option><option>Screw</option><option>Instrument</option><option>Set</option><option>Other</option></select></label>
+<label>Material<select name="material"><option>Titanium</option><option>Stainless Steel 316L</option><option>Stainless Steel</option><option>Other</option></select></label>
+<label>Size / Specification<input name="size" placeholder="e.g. 3.5 mm / 8 holes"></label>
+<label>Quantity<input name="quantity" type="number" min="0" value="0"></label>
+<label>Minimum Qty<input name="minimum_qty" type="number" min="0" value="0"></label>
+<label>Price<input name="price" type="number" min="0" step="0.01" value="0"></label>
+<label class="full">Description<textarea name="description" placeholder="Product details, notes, compatibility, etc."></textarea></label>
+</div>
+<div class="form-actions"><button class="btn primary" type="submit">Save Product</button><a class="btn light" href="productlist.html">Cancel</a></div>
+</form>
+</div>
+</main></div>
+<script src="assets/js/orthozenix.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>OZ.addProduct());</script>
+</body></html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Products - Orthozenix</title><link rel="stylesheet" href="assets/css/orthozenix.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="brand"><div class="brand-mark">OZ</div><div><b>ORTHO ZENIX</b><small>Stock Manager</small></div></div>
+<nav><a href="index.html">Dashboard</a><a class="active" href="productlist.html">Products</a><a href="addproduct.html">Add Product</a></nav>
+<div class="sidebar-bottom">Local Storage Mode<br><span>Your data stays in this browser</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><h1>Products</h1><p>Manage your orthopedic inventory</p></div><a class="btn primary" href="addproduct.html">＋ Add Product</a></header>
+<div class="card">
+<div class="toolbar"><div class="search"><span>⌕</span><input id="search" placeholder="Search catalogue no., product, category, material..."></div><select id="stockFilter"><option value="all">All Stock</option><option value="low">Low Stock</option><option value="out">Out of Stock</option><option value="in">In Stock</option></select></div>
+<div id="productTable" class="table-wrap"></div>
+</div>
+</main></div>
+<script src="assets/js/orthozenix.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>OZ.products());</script>
+</body></html>

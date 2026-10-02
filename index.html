@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Orthozenix Stock Manager</title>
+<link rel="stylesheet" href="assets/css/orthozenix.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">OZ</div><div><b>ORTHO ZENIX</b><small>Stock Manager</small></div></div>
+  <nav>
+    <a class="active" href="index.html">Dashboard</a>
+    <a href="productlist.html">Products</a>
+    <a href="addproduct.html">Add Product</a>
+  </nav>
+  <div class="sidebar-bottom">Local Storage Mode<br><span>Your data stays in this browser</span></div>
+</aside>
+<main class="main">
+<header class="topbar"><div><h1>Dashboard</h1><p>Inventory overview</p></div><a class="btn primary" href="addproduct.html">＋ Add Product</a></header>
+<section class="cards">
+  <div class="card stat"><span>Total Products</span><strong id="totalProducts">0</strong></div>
+  <div class="card stat"><span>Total Stock Units</span><strong id="totalUnits">0</strong></div>
+  <div class="card stat"><span>Low Stock</span><strong id="lowStock">0</strong></div>
+  <div class="card stat"><span>Out of Stock</span><strong id="outStock">0</strong></div>
+</section>
+<section class="grid-2">
+  <div class="card">
+    <div class="section-head"><h2>Recent Products</h2><a href="productlist.html">View all</a></div>
+    <div id="recentProducts" class="table-wrap"></div>
+  </div>
+  <div class="card">
+    <div class="section-head"><h2>Quick Actions</h2></div>
+    <div class="quick">
+      <a href="addproduct.html"><b>＋</b><span>Add new product<small>Create an inventory item</small></span></a>
+      <a href="productlist.html"><b>⌕</b><span>Search products<small>Find by catalogue number</small></span></a>
+      <button id="exportBtn"><b>↓</b><span>Export backup<small>Save your inventory as JSON</small></span></button>
+      <label class="quick"><input id="importFile" type="file" accept=".json" hidden><span class="import-label"><b>↑</b><span>Import backup<small>Restore saved inventory</small></span></span></label>
+    </div>
+  </div>
+</section>
+<section class="card">
+  <div class="section-head"><h2>Recent Stock Activity</h2></div>
+  <div id="activity"></div>
+</section>
+</main>
+</div>
+<script src="assets/js/orthozenix.js"></script>
+<script>document.addEventListener('DOMContentLoaded',()=>OZ.dashboard());</script>
+</body>
+</html>
